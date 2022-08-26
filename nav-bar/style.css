@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Joan&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Joan", serif;
+}
+header {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: sticky;
+  /*   use this when using position : fixed => top:0;left:0; right:0; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0.6);
+}
+.logo a {
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 25px;
+  color: rgb(13, 158, 255);
+  /* filter: drop-shadow(20px 40px 10px  black); */
+}
+nav ul li a {
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: 900;
+  color: rgb(3, 248, 16);
+}
+
+body {
+  background: url(./img/bg1.webp) no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+}
+nav ul li {
+  position: relative;
+  float: left;
+  list-style: none;
+}
+nav ul li a {
+  padding: 10px;
+  display: block;
+  padding: 20px;
+}
+nav ul li a:hover {
+  background: black;
+  color: white;
+}
+nav ul li ul {
+  position: absolute;
+  left: 0;
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+nav ul li ul li {
+  width: 100%;
+  border-top: 2px solid rgba(0, 0, 0, 0.6);
+}
+nav ul li ul li ul {
+  left: 200px;
+  top: 0;
+}
+nav ul li:focus-within > ul,
+nav ul li:hover > ul {
+  display: initial;
+}
+
+#menu {
+  display: none;
+}
+label {
+  font-size: 20px;
+  padding: 10px;
+  color: rgb(17, 202, 226);
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 20px;
+  }
+  header label {
+    display: initial;
+  }
+  header #nav_bar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0,.6);
+    border-top: 2px solid rgba(0, 0, 0, 0.4);
+    display: none;
+  }
+  header #nav_bar ul li{
+      width: 100%;
+  }
+  header #nav_bar ul li ul{
+    width: 100%;
+    position: relative;
+}
+header #nav_bar ul li ul li{
+    background: rgba(0,0,0,.5);
+}
+hader #nav_bar ul li ul li ul {
+    width: 100%;
+    left: 0;
+}
+}
+
+#menu:checked ~ #nav_bar{
+    display: initial;
+}

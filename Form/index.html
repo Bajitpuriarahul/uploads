@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forum</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section>
+      <form id="form_1">
+        <fieldset>
+          <legend>Personl info</legend>
+        <!-- name is used to submit value to be submites to server -->
+        <label for="text"> name :</label>
+        <input type="text" id="text" name="name" value="Rahul Goyal" />
+        <label for="email">Email :</label>
+        <input
+          type="email"
+          name="Email"
+          id="email"
+          required
+          placeholder="abc@gmail.com"
+        />
+        <label for="Password">Password :</label>
+        <input type="password" name="password" id="Password" />
+        <button type="submit">Submit</button>
+        <input type="submit" value="Sign Up" />
+        <br />
+        <!-- to reset all form input  -->
+        <label for="reset">Reset</label>
+        <input type="reset" id="reset" />
+        <br>
+        <label for="url">insert some url to submit to server</label>
+        <input type="url" name="url" id="url" />
+        <br />
+        <label for="hidden"> <!--Hide some info. but submit it to server--></label>
+        <input type="hidden" name="hiden" id="hidden" />
+      </fieldset>
+      </form>
+    </section>
+
+    <!-- Advance Form -->
+
+    <section>
+      <form id="form_2">
+        <!-- second way to use label and input tag -->
+        <label>
+          Password :
+          <input type="password" name="password" />
+        </label>
+        <label>
+          Phone Number
+          <input
+            type="tel"
+            name="tel-number"
+            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+            placeholder="123-45-678"
+          />
+        </label>
+        <label
+          >Age <input type="number" name="number" min="0" max="100" />
+        </label>
+        <br />
+        <label
+          >D.O.B
+          <br />
+          <input type="date" name="date"
+        /></label>
+        <br />
+        <label
+          >Schedule for Appointment<input
+            type="datetime-local"
+            name="datetime-local"
+        /></label>
+        <br />
+        <!-- you can write input before label -->
+        <input type="checkbox" name="is checked" id="checkbox" checked />
+        <label for="checkbox">Remember ME</label>
+        <br />
+        <h5>Choose one or more Computer languages you know</h5>
+        <input type="checkbox" /> javaScript <br />
+        <input type="checkbox" /> Python <br />
+        <input type="checkbox" /> PHP
+      </form>
+    </section>
+
+    <section id="form_3">
+      <form>
+        <label for="color">Fav-color</label>
+        <input type="color" name="color" id="color" />
+        <br />
+        <label for="file">Select a File</label>
+        <input type="file" name="file" id="file" />
+        <br />
+        <label for="image">Select one or more Imgages</label>
+        <input
+          type="file"
+          name="image"
+          id="image"
+          accept="image/*"
+          multiple=""
+        />
+        <!-- multiple attribute to choose multiple files -->
+        <!-- above , image/* lets u choose both png and jpg files but u can specify it by replacing * with png or jpg -->
+        <br />
+        <!--  in Radio , with same id , you can only choose one radio btn only but you can choose multiple check-boxes  -->
+        <label for="checkbox">Gender</label>
+        <br />
+        <input type="radio" name="radio" id="radio" /> Male <br />
+        <input type="radio" name="radio" id="radio" />Female <br />
+        <input type="radio" name="radio" id="radio" />Others
+        <br />
+        <label for="range">Html Expertise (btw 0 to 5)</label>
+        <input type="range" name="range" id="range" min="0" max="5" />
+        <br />
+        <label for="search">search</label>
+        <input type="search" name="search" id="search" />
+      </form>
+    </section>
+
+    <!-- More input type :- url , hidden , reset , go do some research -->
+
+    <section id="form_4">
+      <form>
+        <label for="textarea">Write your comment</label>
+        <textarea name="textarea" id="textarea" cols="10" rows="10"></textarea>
+      </form>
+    </section>
+
+    <section id="form_5">
+      <form>
+        <label for="dropdown">set something</label>
+        <br />
+        <select name="select" id="dropdown">
+          <option value="dog">dog</option>
+          <option value="cat">cat</option>
+          <option value="Camel" selected>Camel</option>
+          <option value="Dragon">Dragon</option>
+        </select>
+        <br />
+        <label for="dropdown_2">set something something</label>
+        <select name="select" id="dropdown_2">
+          <optgroup label="Domestic">
+            <option value="dog">dog</option>
+            <option value="cat">cat</option>
+          </optgroup>
+          <optgroup label="Wild">
+            <option value="Camel" selected>Camel</option>
+            <option value="Dragon">Dragon</option>
+          </optgroup>
+        </select>
+<br>
+<br>
+        <label for="Datalist">select or type</label>
+        <input list="Fav-hero" id="Datalist" name="choose something"/>
+        <datalist id="Fav-hero">
+          <option value="Batman">
+          <option value="Superman">
+          <option value="Flash">
+          <option value="Wonderwomen">
+        </datalist>
+      </form>
+    </section>
+  </body>
+</html>

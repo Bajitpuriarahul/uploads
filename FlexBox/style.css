@@ -1,0 +1,122 @@
+/* align items:- works with height */
+
+/* flex wrap:- works with content of inner div rather than size of inner div */
+
+/* flex-direction: row-reverse or column-reverse; :- */
+/*  makes first element to start from one end and make other elements to follow it */
+
+/* align content:- works when their are multiple lines , works same as align items */
+
+/* align self:- works like align items but works on individual inner divs (or on divs with same class name) , its one property (auto) :- means single div works as per its parent div  */
+
+/* order :- this works on individual items ,  by default order of all inner div is zero , so use values like -1 to place before and +positive  value to place at last  */
+
+/* flex grow :- works on items or items with same class name , gives ramaining space to item */
+
+/* text align :- works to shift text in horizontal axis */
+
+/* Flex basis :- works like max and min width , handles  width of inner div , works on inner div , also works to make width responsive  (when taken into %) */
+
+/* flex shrink:- works opposite to flex grow , 0 - unshirkable , any value - shriks in propotion */
+
+/* short hand to use flex grow |basis |shrink
+flex:- grow shrink basis(auto , default value) */
+
+/* flex with margin auto , if applied in inner div (outer div has only one element ) makes inner div centered , if many element , then use margin(or with any direction) auto to adjust inner div*/
+/* use margin auto with height or width :- in % or vh|vw to see magic  */
+
+/* nested flex:-  To create flex inside an flex box*/
+
+/* text align :- any direction */
+/* text align last :- to change last line of para  */
+/* text transform :- uppercase | lowercase | capatalize */
+/* text indent :- works in px , works on first line  */
+/* word spacing :- space btw words */
+/* letter spacing :- space btw letter */
+
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
+
+.container {
+  border: 2px solid black;
+  align-content: flex-start;
+  width: 80vw;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  /* margin: 10px; */
+  /* padding: 10px; */
+  /* align-items: flex-start; */
+  /* flex-wrap: wrap; */
+  /* width: 400px; */
+}
+.box {
+  font-size: 20px;
+  background-color: brown;
+  color: white;
+  height: 50px;
+  /* padding: 10px; */
+  /* width: 100px; */
+  /* text-align: center; */
+  /* margin: 5px; */
+  /* align-self: center; */
+  /* height: 100px; */
+  /* flex-grow: 1; */
+  /* margin: auto; */
+}
+.box1 {
+  background-color: olive;
+  /* flex-basis: 200px; */
+  /* flex-shrink: 1; */
+  /* flex-grow: 1; */
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  /* text-align: end; */
+  /* align-self:auto ; */
+  /* margin-left: auto;
+  margin-top: auto; */
+}
+.box2 {
+  background-color: rgb(22, 180, 35);
+  display: flex;
+  text-align: center;
+  /* order: 4; */
+  /* order: -1; */
+  /* margin-right: auto; */
+}
+.subitem {
+  margin: 5px;
+  background-color: chocolate;
+  flex-grow: 1;
+}
+.box3 {
+  background-color: rgb(219, 17, 95);
+  /* order: -2; */
+}
+.box4 {
+  background-color: rgb(145, 12, 235);
+}
+
+#form {
+  border: 2px solid black;
+  padding: 20px;
+  list-style: none;
+  background: rgb(42, 182, 0);
+  margin-bottom: 100px;
+}
+#form li {
+  display: flex;
+  justify-content: flex-end;
+}
+#form li label {
+  flex: 1;
+}
+#form li input {
+  flex: 2;
+  border: 1px solid black;
+}

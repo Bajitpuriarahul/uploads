@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="outer_div">
+        <div class="clock">
+                <div class="ring"  id="sec" style="--clr:#3aac05;"><i></i></div>
+                <div class="ring ring2"  id="min"style=" --clr:#fee800;"><i></i></div>
+                <div class="ring ring3" id="hr" style="--clr:#13c6dd;"><i></i></div>
+        
+
+
+            <span style="--i:1"><b>1<b></span>
+                <span style="--i:2"><b>2<b></span>
+                <span style="--i:3"><b>3<b></span>
+                <span style="--i:4"><b>4<b></span>
+                <span style="--i:5"><b>5<b></span>
+                <span style="--i:6"><b>6<b></span>
+                <span style="--i:7"><b>7<b></span>
+                <span style="--i:8"><b>8<b></span>
+                <span style="--i:9"><b>9<b></span>
+                <span style="--i:10"><b>10<b></span>
+                <span style="--i:11"><b>11<b></span>
+                <span style="--i:12"><b>12<b></span>
+        </div>
+    </div>
+
+<!-- javascript -->
+    <script>
+        setInterval(()=>{
+            d = new Date();
+            htime = d.getHours();
+            mtime = d.getMinutes();  
+            stime = d.getSeconds();
+
+            hrotation = 30*htime + mtime/2;
+            mrotation =6*mtime;
+            srotation = 6*stime;
+
+         hr.style.transform = `rotate(${hrotation}deg)`;
+         min.style.transform = `rotate(${mrotation}deg)`;
+         sec.style.transform = `rotate(${srotation}deg)`;
+           },1000)
+
+         
+// or use this 
+
+
+//    let hr = document.querySelector('#hr');
+//      let min = document.querySelector('#min');
+//      let sec = document.querySelector('#sec');
+    //  setInterval(()=>{
+    //     let day = new Date();
+    //  let hh = day.getHours() * 30;
+    //  let mm = day.getMinutes() * 6;
+    //  let ss = day.getSeconds() * 6;
+
+    //  hr.style.transform = `rotate(${hh+(mm/12)}deg)`;
+    //  min.style.transform = `rotate(${mm}deg)`;
+    //  sec.style.transform = `rotate(${ss}deg)`;
+    //  })
+    </script>
+</body>
+</html>

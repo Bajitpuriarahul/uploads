@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSIC_PLAYER|| TRIBUTE TO SIDHU MOOSEWALA</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/66df5bc5ee.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+<div class="container">
+    <div class="player">
+        <H1 id="album">295</H1>
+        <h2 id="artist">SIDHU MOOSEWALA</h2>
+        <div class="img">
+            <img src= "./img/song-1.jpg"alt="">
+        </div>
+        <audio src="./music/song-1.mp3"  ></audio>
+
+<!--------------- progress_Bar------------>
+<div class="bar_container" id="bar_container">
+    <div class="duration_meter">
+        <div id="current_time">0:00</div>
+        <div id="duration">4:32</div>
+    </div>
+    <div class="progress_div" id="progress_div" >
+        <div class="progress" id="progress"></div>
+
+    </div>
+</div>
+
+        <!---------------- buttons----------------- -->
+        <div class="controls">
+            <i class="fa-solid fa-backward" title="Previous"></i>
+        <i class="fa-solid fa-play" id="play" title="Play|Pause"></i>
+        <i class="fa-solid fa-forward" title="Forward"></i>
+    </div>
+            <script src="./index.js"></script>
+    </div>
+</div>
+
+
+</body>
+</html>
